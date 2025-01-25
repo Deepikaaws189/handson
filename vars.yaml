@@ -7,4 +7,4 @@
   tasks: #vars
   - name: vars
     ansible.builtin.debug:
-      msg: "my name is {{name}} and im from {{chennai}}"
+      msg: "my name is {{ name }} and im from {{ place }}"
