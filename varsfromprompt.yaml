@@ -4,6 +4,7 @@
   vars_prompt:
   - name: call
     prompt: please center your name
+    private: false
   - name: place
     prompt: where are you from
   tasks: #vars
