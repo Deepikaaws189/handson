@@ -2,13 +2,13 @@
   hosts: local
   connection: local
   vars:
-   - details.yaml
+  - details.yaml
   tasks: #vars
   - name: vars
     ansible.builtin.debug:
       msg: "my name is {{ call }} and im from {{ place }}"
   - name: vars
     vars:
-      - localvars.yaml
+    - localvars.yaml
     ansible.builtin.debug:
       msg: "my name is {{ call }} and im from {{ place }}"
