@@ -1,7 +1,10 @@
 - name: vars
   hosts: local
   connection: local
+  vars:
+   name: Deepika
+   place: Chennai
   tasks: #vars
   - name: vars
     ansible.builtin.debug:
-     msg: "my name is deepika and im from chennai"
+     msg: "my name is {{name}} and im from {{chennai}}"
