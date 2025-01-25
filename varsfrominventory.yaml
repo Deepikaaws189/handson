@@ -1,0 +1,7 @@
+- name: cfromfile
+  hosts: local
+  connection: local
+  tasks: #vars
+  - name: cfromfile global
+    ansible.builtin.debug:
+      msg: "my name is {{ call }} and im from {{ place }}"
