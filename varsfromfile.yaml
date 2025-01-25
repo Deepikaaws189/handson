@@ -1,13 +1,13 @@
-- name: vars
+- name: cfromfile
   hosts: local
   connection: local
   vars_file:
   - details.yaml
   tasks: #vars
-  - name: vars
+  - name: cfromfile global
     ansible.builtin.debug:
       msg: "my name is {{ call }} and im from {{ place }}"
-  - name: vars
+  - name: cfromfile local
     vars_file:
     - localvars.yaml
     ansible.builtin.debug:
