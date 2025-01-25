@@ -1,0 +1,12 @@
+- name: cfromfile
+  hosts: local
+  connection: local
+  vars_prompt:
+  - name: call
+    prompt: please center your name
+  - name: place
+    prompt: where are you from
+  tasks: #vars
+  - name: cfromfile global
+    ansible.builtin.debug:
+      msg: "my name is {{ call }} and im from {{ place }}"
