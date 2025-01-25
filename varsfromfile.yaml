@@ -7,8 +7,8 @@
   - name: cfromfile global
     ansible.builtin.debug:
       msg: "my name is {{ call }} and im from {{ place }}"
-  # - name: cfromfile local
-  #   vars_files:
-  #   - localvars.yaml
-  #   ansible.builtin.debug:
-  #     msg: "my name is {{ call }} and im from {{ place }}"
+  - name: cfromfile local
+    vars_files:
+    - localvars.yaml
+    ansible.builtin.debug:
+      msg: "my name is {{ call }} and im from {{ place }}"
