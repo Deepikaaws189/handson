@@ -1,0 +1,9 @@
+- name: play level variables
+  hosts: local
+  connection: local
+  vars_files:
+  - vffv.yaml
+  tasks: #play levell variables
+    - name: play level variables
+      ansible.builtin.debug:
+        msg: "Course is {{course}}, duration is {{duration}} and trainer is {{trainer}}"
